@@ -379,7 +379,7 @@
         <height>41</height>
        </rect>
       </property>
-      <layout class="QHBoxLayout" name="horizontalLayoutPanel" stretch="0,0,0,0,0">
+      <layout class="QHBoxLayout" name="horizontalLayoutPanel" stretch="0,0,0,0">
        <property name="spacing">
         <number>14</number>
        </property>
@@ -392,7 +392,20 @@
           </sizepolicy>
          </property>
          <property name="text">
-          <string>(un)select all</string>
+          <string>Clear Selections</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QRadioButton" name="radioListMode">
+         <property name="sizePolicy">
+          <sizepolicy hsizetype="Maximum" vsizetype="Fixed">
+           <horstretch>0</horstretch>
+           <verstretch>0</verstretch>
+          </sizepolicy>
+         </property>
+         <property name="text">
+          <string>List mode</string>
          </property>
         </widget>
        </item>
@@ -409,19 +422,6 @@
          </property>
          <property name="checked">
           <bool>true</bool>
-         </property>
-        </widget>
-       </item>
-       <item>
-        <widget class="QRadioButton" name="radioListMode">
-         <property name="sizePolicy">
-          <sizepolicy hsizetype="Maximum" vsizetype="Fixed">
-           <horstretch>0</horstretch>
-           <verstretch>0</verstretch>
-          </sizepolicy>
-         </property>
-         <property name="text">
-          <string>List mode</string>
          </property>
         </widget>
        </item>
@@ -451,7 +451,7 @@
       <bool>false</bool>
      </property>
      <property name="columnCount">
-      <number>11</number>
+      <number>12</number>
      </property>
      <attribute name="headerShowSortIndicator" stdset="0">
       <bool>true</bool>
@@ -471,6 +471,19 @@
      </column>
      <column>
       <property name="text">
+       <string>Confirmations</string>
+      </property>
+      <property name="toolTip">
+       <string>Confirmed</string>
+      </property>
+     </column>
+     <column>
+      <property name="text">
+       <string>Weight</string>
+      </property>
+     </column>
+     <column>
+      <property name="text">
        <string>Label</string>
       </property>
      </column>
@@ -482,14 +495,6 @@
      <column>
       <property name="text">
        <string>Date</string>
-      </property>
-     </column>
-     <column>
-      <property name="text">
-       <string>Confirmations</string>
-      </property>
-      <property name="toolTip">
-       <string>Confirmed</string>
       </property>
      </column>
      <column>

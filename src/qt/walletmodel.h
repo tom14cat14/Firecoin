@@ -96,6 +96,9 @@ public:
     // Wallet backup
     bool backupWallet(const QString &filename);
 
+     //Stake Weight for coin control dialog
+     void getStakeWeightFromValue(const qint64& nTime, const qint64& nValue, quint64& nWeight);
+
     // RAI object for unlocking wallet, returned by requestUnlock()
     class UnlockContext
     {
