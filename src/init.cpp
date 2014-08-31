@@ -383,11 +383,11 @@ bool AppInit2()
 
     nDerivationMethodIndex = 0;
 
-    fTestNet = GetBoolArg("-testnet");
+    //fTestNet = GetBoolArg("-testnet");
     //fTestNet = true;
-    if (fTestNet) {
+    //if (fTestNet) {
         SoftSetBoolArg("-irc", true);
-    }
+    //}
 
     if (mapArgs.count("-bind")) {
         // when specifying an explicit binding address, you want to listen on it
