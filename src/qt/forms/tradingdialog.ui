@@ -35,7 +35,7 @@
     <enum>QTabWidget::North</enum>
    </property>
    <property name="currentIndex">
-    <number>1</number>
+    <number>6</number>
    </property>
    <widget class="QWidget" name="BuyTab">
     <attribute name="title">
@@ -2686,7 +2686,7 @@
       <rect>
        <x>30</x>
        <y>200</y>
-       <width>141</width>
+       <width>171</width>
        <height>16</height>
       </rect>
      </property>
@@ -2697,7 +2697,7 @@
       </font>
      </property>
      <property name="text">
-      <string>Bittrex Deposit Address:</string>
+      <string>Bittrex Fire Deposit Address:</string>
      </property>
     </widget>
     <widget class="QPushButton" name="GenDepositBTN">
@@ -2710,13 +2710,13 @@
       </rect>
      </property>
      <property name="text">
-      <string>Generate Deposit Address</string>
+      <string>Generate Fire Coin Deposit Address</string>
      </property>
     </widget>
     <widget class="QLabel" name="DepositAddressLabel">
      <property name="geometry">
       <rect>
-       <x>180</x>
+       <x>200</x>
        <y>200</y>
        <width>261</width>
        <height>16</height>

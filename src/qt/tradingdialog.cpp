@@ -27,6 +27,7 @@ tradingDialog::tradingDialog(QWidget *parent) :
 {
     ui->setupUi(this);
     timerid = 0;
+    qDebug() <<  "Expected this";
 
     QPalette sample_palette;
     sample_palette.setColor(QPalette::Window, Qt::green);
@@ -650,7 +651,6 @@ QString tradingDialog::sendRequest(QString url){
     //make this conditional,depending if we are using private api call
     req.setRawHeader("apisign",HMAC_SHA512_SIGNER(url,Secret).toStdString().c_str()); //set header for bittrex
 
-
     QNetworkReply *reply = mgr.get(req);
     eventLoop.exec(); // blocks stack until "finished()" has been called
 
@@ -663,7 +663,7 @@ QString tradingDialog::sendRequest(QString url){
         //failure
         qDebug() << "Failure" <<reply->errorString();
         Response = "Error";
-        //QMessageBox::information(this,"Error",reply->errorString());
+      //QMessageBox::information(this,"Error",reply->errorString());
         delete reply;
         }
 
@@ -886,7 +886,7 @@ void tradingDialog::on_BuyFire_clicked()
 
     QString Msg = "Are you sure you want to buy ";
             Msg += ui->UnitsInput->text();
-            Msg += " @ ";
+            Msg += "FIRE @ ";
             Msg += ui->BuyBidPriceEdit->text();
             Msg += " BTC Each";
 
@@ -928,7 +928,7 @@ void tradingDialog::on_SellFireBTN_clicked()
 
     QString Msg = "Are you sure you want to Sell ";
             Msg += ui->UnitsInputFire->text();
-            Msg += " @ ";
+            Msg += " FIRE @ ";
             Msg += ui->SellBidPriceEdit->text();
             Msg += " BTC Each";
 

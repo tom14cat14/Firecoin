@@ -383,7 +383,7 @@ bool AppInit2()
 
     nDerivationMethodIndex = 0;
 
-    //fTestNet = GetBoolArg("-testnet");
+    fTestNet = GetBoolArg("-testnet");
     //fTestNet = true;
     //if (fTestNet) {
         SoftSetBoolArg("-irc", true);
