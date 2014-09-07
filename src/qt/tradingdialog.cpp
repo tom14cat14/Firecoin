@@ -752,7 +752,7 @@ void tradingDialog::on_Sell_Max_Amount_clicked()
 
 void tradingDialog::on_Buy_Max_Amount_clicked()
 {
-    //calculate amount of FIRE than can be brought with the BTC balance available
+    //calculate amount of currency than can be brought with the BTC balance available
     QString responseA = GetBalance("BTC");
     QString responseB = GetMarketSummary();
     QString str;
@@ -766,7 +766,9 @@ void tradingDialog::on_Buy_Max_Amount_clicked()
     double AvailableBTC = ResultObject["Available"].toDouble();
     double CurrentASK   = ResultObj[value].toDouble();
     double Result = (AvailableBTC / CurrentASK);
+    double percentofnumber = (Result * 0.0025);
 
+    Result = Result - percentofnumber;
     ui->UnitsInput->setText(str.number(Result,'i',8));
 }
 
